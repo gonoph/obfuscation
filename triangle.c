@@ -11,13 +11,14 @@
  * to make: gcc -o triangle triangle.c
  */
 
+#define E(x) ((c>>x)&0xff)
 // I - extract a char from the const int
 // I: if x is even, then extract highest 8bits as a char
 // I: if x is odd, then return lowest 8bits as a char
-#define I(x) (char)(x%2?(c&0xff00)>>8:c)
+#define I(x) (char)(x%2?E(8):c)
 
 // R - extract the carriage return (0x0a)
-#define R    (char)((c&0xff0000)>>16)
+#define R    (char)E(16)
 
 // pc: putchar() macro
 #define pc(x) putchar(x)

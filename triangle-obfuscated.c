@@ -1,6 +1,7 @@
 #include<stdio.h>
-#define I(x) (char)(x%2?(c&0xff00)>>8:c)
-#define R (char)((c&0xff0000)>>16)
+#define E(x) ((c>>x)&0xff)
+#define I(x) (char)(x%2?E(8):c)
+#define R (char)E(16)
 #define pc(x) putchar(x)
 #define rr(o,r) (o?r+1:r-1)
 const int c=(int)0x0a202a;
