@@ -59,3 +59,38 @@ $ sh steps.sh
 ****
 *****
 ```
+
+## Xmark
+
+Output:
+```
+##########
+##      ##
+# #    # #
+#  #  #  #
+#   ##   #
+#  #  #  #
+# #    # #
+##      ##
+##########
+```
+
+Two implementations.
+
+### Missy Class
+
+This uses the fact that the ouput is a mirror image and flip of just a quarter.
+
+1. creates a quarter of the output using recursion
+2. flips it by appending; aka mirror horizontally
+3. reverses the rows and appends; aka mirror vertically
+
+### Bitmap
+
+This uses a bitmap of the entire image, and just converts bits to characters.
+
+1. stores the bitmap as a hex number
+2. converts the hexnumber to bytes
+3. passes each byte to a function that converts the byte to a binary string.
+4. replaces 0 with ' ', and 1 with '#'
+5. prints the resultant string sandwiched between '#' and '#'
