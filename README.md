@@ -37,6 +37,8 @@ This converts a large integer into python code and runs it to produce steps.
 The python function is:
 
 ```python
+def p(i):
+    print('*' * i); return 0 if i>4 else p(i+1);
 ```
 
 The integer and length were obtained by:
