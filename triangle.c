@@ -16,6 +16,9 @@
 // I: if x is odd, then return lowest 8bits as a char
 #define I(x) (char)(x%2?(c&0xff00)>>8:c)
 
+// R - extract the carriage return (0x0a)
+#define R    (char)((c&0xff0000)>>16)
+
 // pc: putchar() macro
 #define pc(x) putchar(x)
 
@@ -25,7 +28,7 @@
 #define rr(o,r) (o?r+1:r-1)
 
 // integer of chars '* ' - but in little endian format
-const int c = (int) 0x202a;
+const int c = (int) 0x0a202a;
 
 // recursive function to print out rows and columns
 // r: rows
@@ -40,7 +43,7 @@ int p(int r, int i, int o)
     // if NOT last column, print ' '
     if (!i)
     {
-        pc('\n');
+        pc(R);
     } else {
         pc(I(1));
     }
