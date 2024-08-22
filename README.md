@@ -12,11 +12,13 @@ It obfuscates in several ways:
  3. It uses a recursive function instead of a loop.
 
 to make:
+
 ```bash
 gcc -o triangle triangle.c
 ```
 
 Output:
+
 ```bash
 $ ./triangle
 *
@@ -50,7 +52,7 @@ with open('pfunc.py', 'rb') as f:
 b=int.from_bytes(a, byteorder='big')
 print(f'length: {len(a)}')
 print(f'number: {hex(b)}')
-...
+```
 
 Output:
 ```bash
