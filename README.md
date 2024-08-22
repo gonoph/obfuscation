@@ -29,3 +29,33 @@ $ ./triangle
 * *
 *
 ```
+
+## Steps
+
+This converts a large integer into python code and runs it to produce steps.
+
+The python function is:
+
+```python
+```
+
+The integer and length were obtained by:
+
+```python
+with open('pfunc.py', 'rb') as f:
+  a=f.read()
+
+b=int.from_bytes(a, byteorder='big')
+print(f'length: {len(a)}')
+print(f'number: {hex(b)}')
+...
+
+Output:
+```bash
+$ sh steps.sh
+*
+**
+***
+****
+*****
+```
