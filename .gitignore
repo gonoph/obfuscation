@@ -1,4 +1,9 @@
+# compiled tests
 triangle
+bitwise-add
+
+# vim swap
+.*.swp
 
 # vim backups
 *~
