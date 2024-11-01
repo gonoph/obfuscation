@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 # b=(converted to int)
 # def p(i):
