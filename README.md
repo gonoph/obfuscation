@@ -1,6 +1,11 @@
 # obfuscation
 Collection of obfuscated programs for fun
 
+To run all the programs:
+```
+make test
+```
+
 ## Triangle
 
 This uses a recursive function to print out a triangle of asterisks.
@@ -98,3 +103,25 @@ This uses a bitmap of the entire image, and just converts bits to characters.
 3. passes each byte to a function that converts the byte to a binary string.
 4. replaces 0 with ' ', and 1 with '#'
 5. prints the resultant string sandwiched between '#' and '#'
+
+## Bitwise Add
+
+This adds two numbers using only bitwise operators, using recursion to shift
+the carry bits.
+
+Output:
+```
+a=51, b=49, result=100
+```
+
+Two implementations.
+
+### C code
+
+Obfuscated with macros, reduced spaces, and all in one line.
+
+### Python
+
+Not exactly obfuscated, but recursion is sometimes hard to follow. The bitwise
+operations are also not intuitive for some folks when talking about adding two
+numbers together.
